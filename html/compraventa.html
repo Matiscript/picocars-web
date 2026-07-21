@@ -22,36 +22,38 @@
             <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition">Buscar</button>
         </div>
 
-        <!-- Grid de Coches (Simulados) -->
+        <!-- Grid de Coches -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- Coche 1 -->
-            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group">
+            <!-- Coche 1 (Conectado a la ficha) -->
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group flex flex-col">
                 <div class="h-48 bg-zinc-800 flex items-center justify-center text-zinc-500">
                     [Foto del Audi A3]
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-grow">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-xl font-bold group-hover:text-blue-400 transition">Audi A3 S-Line</h3>
                         <span class="text-lg font-bold text-blue-500">18.500 €</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mb-4">2019 • 120.000 km • Diésel • Manual</p>
-                    <button class="w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</button>
+                    <p class="text-sm text-zinc-400 mb-4 flex-grow">2019 • 120.000 km • Diésel • Manual</p>
+                    <!-- AQUÍ ESTÁ EL ENLACE ACTUALIZADO -->
+                    <a href="./detalleCoches.html" class="block text-center w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</a>
                 </div>
             </div>
 
-            <!-- Coche 2 -->
-            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group">
+            <!-- Coche 2 (Conectado a la ficha) -->
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group flex flex-col">
                 <div class="h-48 bg-zinc-800 flex items-center justify-center text-zinc-500">
                     [Foto del VW Golf]
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-grow">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-xl font-bold group-hover:text-blue-400 transition">Volkswagen Golf GTI</h3>
                         <span class="text-lg font-bold text-blue-500">22.900 €</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mb-4">2021 • 65.000 km • Gasolina • Automático</p>
-                    <button class="w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</button>
+                    <p class="text-sm text-zinc-400 mb-4 flex-grow">2021 • 65.000 km • Gasolina • Automático</p>
+                    <!-- AQUÍ ESTÁ EL ENLACE ACTUALIZADO -->
+                    <a href="./detalleCoches.html" class="block text-center w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</a>
                 </div>
             </div>
 

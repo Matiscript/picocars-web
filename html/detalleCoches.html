@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi A3 S-Line - Picocars</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen p-6">
+
+    <nav class="max-w-6xl mx-auto flex justify-between items-center border-b border-zinc-800 pb-4 mb-8">
+        <h1 class="text-xl font-bold text-blue-500">PICOCARS <span class="text-zinc-500 text-sm font-normal">| Vehículo</span></h1>
+        <a href="./compraventa.html" class="text-sm text-zinc-400 hover:text-white">← Volver al catálogo</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Columna Izquierda: Galería de Fotos -->
+        <div class="space-y-4">
+            <!-- Foto Principal -->
+            <div class="w-full h-80 lg:h-[400px] bg-zinc-900 border border-zinc-800 rounded-2xl flex items-center justify-center text-zinc-500">
+                [Foto Principal Grande: Frontal del coche]
+            </div>
+            <!-- Miniaturas -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="h-20 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-xs text-zinc-500 hover:border-blue-500 cursor-pointer transition">Interior</div>
+                <div class="h-20 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-xs text-zinc-500 hover:border-blue-500 cursor-pointer transition">Trasera</div>
+                <div class="h-20 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-xs text-zinc-500 hover:border-blue-500 cursor-pointer transition">Llantas</div>
+                <div class="h-20 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-xs text-zinc-500 hover:border-blue-500 cursor-pointer transition">Motor</div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Datos y Contacto -->
+        <div class="flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-3xl font-bold">Audi A3 S-Line 2.0 TDI</h2>
+                    <span class="text-3xl font-bold text-blue-500">18.500 €</span>
+                </div>
+                
+                <!-- Cuadrícula de especificaciones rápidas -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="block text-xs text-zinc-500 mb-1">Año</span>
+                        <span class="font-semibold">2019</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="block text-xs text-zinc-500 mb-1">Kilómetros</span>
+                        <span class="font-semibold">120.000 km</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="block text-xs text-zinc-500 mb-1">Combustible</span>
+                        <span class="font-semibold">Diésel</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="block text-xs text-zinc-500 mb-1">Cambio</span>
+                        <span class="font-semibold">Manual</span>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Comentarios del vendedor</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Vehículo nacional en perfecto estado, único propietario. Paquete deportivo S-Line interior y exterior. Revisiones al día, ITV pasada hasta 2025. Se entrega recién pintado (somos taller especializado) y con 1 año de garantía.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="flex gap-4 mt-8">
+                <button class="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-500 transition text-center">
+                    Contactar por WhatsApp
+                </button>
+                <button class="bg-zinc-800 text-zinc-100 px-6 py-4 rounded-xl font-semibold hover:bg-zinc-700 border border-zinc-700 transition">
+                    Llamar
+                </button>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
