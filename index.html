@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picocars - Chapa, Pintura y Ocasión</title>
+    <!-- Tailwind CSS para diseño moderno instantáneo -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="p-6 border-b border-zinc-800 text-center">
+        <h1 class="text-xl font-bold tracking-wider text-amber-500">PicoCars</h1>
+        <p class="text-xs text-zinc-400">Soluciones mecánicas y mercado de ocasión</p>
+    </header>
+
+    <!-- Main Section: La Bifurcación -->
+    <main class="max-w-4xl mx-auto p-6 w-full grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        
+        <!-- Opción 1: Chapa y Pintura -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500 transition duration-300 group">
+            <div>
+                <span class="text-3xl">🛠️</span>
+                <h2 class="text-2xl font-bold mt-4 group-hover:text-amber-400 transition">Chapa y Pintura</h2>
+                <p class="text-zinc-400 mt-2 text-sm">Reparaciones, galería de proyectos de restauración, calculador de presupuestos y cita previa.</p>
+            </div>
+            <a href="./chapa-pintura.html" class="mt-8 inline-block bg-zinc-800 text-center py-3 rounded-xl font-semibold hover:bg-amber-500 hover:text-zinc-950 transition">
+                Acceder al Taller
+            </a>
+        </div>
+
+        <!-- Opción 2: Compraventa -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-blue-500 transition duration-300 group">
+            <div>
+                <span class="text-3xl">🚗</span>
+                <h2 class="text-2xl font-bold mt-4 group-hover:text-blue-400 transition">Compraventa de Coches</h2>
+                <p class="text-zinc-400 mt-2 text-sm">Catálogo de vehículos revisados, filtrado por categoría, precios y stock actualizado al momento.</p>
+            </div>
+            <a href="./compraventa.html" class="mt-8 inline-block bg-zinc-800 text-center py-3 rounded-xl font-semibold hover:bg-blue-500 hover:text-zinc-950 transition">
+                Ver Vehículos
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-4 border-t border-zinc-800 text-center text-xs text-zinc-500">
+        Plataforma interna y comercial de gestión automatizada.
+    </footer>
+
+</body>
+</html>
