@@ -6,6 +6,10 @@
     <title>Vehículos de Ocasión - Picocars</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700&display=swap" rel="stylesheet">
+    
+    <!-- ENLAZAMOS EL SCRIPT DE JAVASCRIPT AQUÍ -->
+    <script src="./js/catalogo.js" defer></script>
+    
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
@@ -18,78 +22,79 @@
 
     <main class="flex-grow max-w-5xl mx-auto p-6 w-full mt-6">
         
-        <!-- Cabecera del Catálogo -->
+        <!-- Cabecera del Catálogo (Texto adaptado para el autónomo) -->
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold mb-4">Catálogo de Vehículos</h2>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Todos nuestros coches se entregan 100% revisados, con mantenimiento al día y 1 año de garantía premium.</p>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Todos nuestros coches se entregan 100% revisados y con el mantenimiento al día. Transparencia total en cada venta.</p>
         </div>
 
-        <!-- Grid del Catálogo de Coches -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            
-            <!-- Coche 1: Audi A3 -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group flex flex-col">
-                <div class="relative h-64 overflow-hidden bg-zinc-800">
-                    <!-- Aquí va tu primera foto -->
-                    <img src="./img/audia3.jpg" alt="Audi A3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">REVISADO</div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Audi A3</h3>
-                        <span class="text-xl font-bold text-blue-500">18.500€</span>
-                    </div>
-                    <p class="text-zinc-400 text-sm mb-6">S-Line 2.0 TDI 150cv. Estado impecable, único propietario.</p>
-                    
-                    <!-- Especificaciones rápidas -->
-                    <div class="grid grid-cols-3 gap-2 mb-8 text-center text-xs text-zinc-300">
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">📅 2019</div>
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">🛣️ 85.000 km</div>
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">⛽ Diésel</div>
-                    </div>
-                    
-                    <!-- Botón hacia el detalle -->
-                    <a href="./detalleCoches.html" class="mt-auto bg-zinc-800 text-center py-4 rounded-xl font-bold tracking-wide hover:bg-blue-500 hover:text-zinc-950 transition w-full shadow-lg">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-
-            <!-- Coche 2: VW Golf GTI -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group flex flex-col">
-                <div class="relative h-64 overflow-hidden bg-zinc-800">
-                    <!-- Aquí va tu segunda foto -->
-                    <img src="./img/volskgti2021.jpg" alt="Volkswagen Golf GTI 2021" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">RECIÉN LLEGADO</div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">VW Golf GTI</h3>
-                        <span class="text-xl font-bold text-blue-500">32.900€</span>
-                    </div>
-                    <p class="text-zinc-400 text-sm mb-6">2.0 TSI 245cv DSG8. Full extras, techo panorámico, asientos backet.</p>
-                    
-                    <!-- Especificaciones rápidas -->
-                    <div class="grid grid-cols-3 gap-2 mb-8 text-center text-xs text-zinc-300">
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">📅 2021</div>
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">🛣️ 42.000 km</div>
-                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">⛽ Gasolina</div>
-                    </div>
-                    
-                    <!-- Botón hacia el detalle -->
-                    <a href="./detalleCoches.html" class="mt-auto bg-zinc-800 text-center py-4 rounded-xl font-bold tracking-wide hover:bg-blue-500 hover:text-zinc-950 transition w-full shadow-lg">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-
+        <!-- Grid del Catálogo de Coches (Vacío, JS lo rellenará) -->
+        <div id="catalogo-coches" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <!-- Efecto de carga temporal -->
+            <p class="text-zinc-500 text-center col-span-full py-10 animate-pulse">Cargando vehículos disponibles...</p>
         </div>
+        
     </main>
 
-    <!-- Pega aquí debajo el Footer gigante y realista que hicimos antes para el index.html -->
-    <footer class="bg-zinc-900 border-t border-zinc-800 pt-12 pb-6">
-        <div class="max-w-5xl mx-auto px-6 text-center text-xs text-zinc-500">
-            <p>&copy; 2026 Picocars. Todos los derechos reservados. (Acuérdate de pegar el footer completo aquí)</p>
+    <!-- Footer Premium Realista -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 pt-12 pb-6 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+            
+            <!-- Columna 1: Marca -->
+            <div>
+                <h3 class="text-lg font-bold text-amber-500 mb-4 tracking-wider">PICOCARS</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Tu taller de confianza especializado en chapa, pintura y la selección de los mejores vehículos de ocasión. Calidad, rapidez y transparencia en cada detalle.
+                </p>
+            </div>
+            
+            <!-- Columna 2: Contacto -->
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">Contacto</h3>
+                <ul class="text-sm text-zinc-400 space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="text-zinc-500">📍</span> 
+                        <span>Polígono Industrial San Luis<br>C. Lisboa, 4, Cruz de Humilladero, 29006 Málaga</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-zinc-500">📞</span> 
+                        <span>+34 631 66 35 23</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-zinc-500">✉️</span> 
+                        <span>info@picocars.com</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna 3: Horario -->
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">Horario de Taller</h3>
+                <ul class="text-sm text-zinc-400 space-y-2">
+                    <li class="flex justify-between border-b border-zinc-800 pb-2">
+                        <span>Lunes - Viernes:</span> 
+                        <span class="text-white">09:00 - 14:00 | 16:00 - 19:30</span>
+                    </li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-2 pt-2">
+                        <span>Sábados:</span> 
+                        <span class="text-white">10:00 - 13:30</span>
+                    </li>
+                    <li class="flex justify-between pt-2">
+                        <span>Domingos:</span> 
+                        <span class="text-amber-500 font-semibold">Cerrado</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Copyright y Legales -->
+        <div class="max-w-5xl mx-auto px-6 border-t border-zinc-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500">
+            <p>&copy; 2026 Picocars. Todos los derechos reservados.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-amber-500 transition">Aviso Legal</a>
+                <a href="#" class="hover:text-amber-500 transition">Política de Privacidad</a>
+                <a href="#" class="hover:text-amber-500 transition">Cookies</a>
+            </div>
         </div>
     </footer>
 
