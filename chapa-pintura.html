@@ -1,46 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller - Picocars</title>
+    <title>Taller de Chapa y Pintura - Picocars</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen p-6">
 
-    <nav class="max-w-4xl mx-auto flex justify-between items-center border-b border-zinc-800 pb-4 mb-8">
-        <h1 class="text-xl font-bold text-amber-500">PICOCARS <span class="text-zinc-500 text-sm font-normal">| Taller</span></h1>
-        <a href="./index.html" class="text-sm text-zinc-400 hover:text-white">← Volver al inicio</a>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
+
+    <!-- Navegación -->
+    <nav class="max-w-5xl mx-auto w-full flex justify-between items-center border-b border-zinc-800 py-6 px-6">
+        <h1 class="text-xl font-bold text-amber-500 tracking-wider">PICOCARS <span
+                class="text-zinc-500 text-sm font-normal">| Taller</span></h1>
+        <a href="./index.html" class="text-sm font-semibold text-zinc-400 hover:text-white transition">← Volver al
+            inicio</a>
     </nav>
 
-    <main class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">Especialistas en Chapa y Pintura</h2>
-            <p class="text-zinc-400">Devolvemos tu coche a su estado de fábrica con los mejores materiales.</p>
+    <main class="flex-grow max-w-5xl mx-auto p-6 w-full mt-6">
+
+        <!-- Cabecera del Taller -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">El arte de la restauración</h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">No tapamos golpes, restauramos vehículos a su estado de fábrica
+                utilizando pintura de primera calidad y las técnicas más avanzadas del sector.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
-                <h3 class="text-xl font-semibold text-amber-400 mb-2">Reparación de Golpes</h3>
-                <p class="text-sm text-zinc-400">Arreglamos abolladuras y arañazos de cualquier tamaño.</p>
-            </div>
-            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
-                <h3 class="text-xl font-semibold text-amber-400 mb-2">Pintura Integral</h3>
-                <p class="text-sm text-zinc-400">Cambios de color y repintado de piezas con exactitud de tono.</p>
-            </div>
-            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
-                <h3 class="text-xl font-semibold text-amber-400 mb-2">Pulido de Faros</h3>
-                <p class="text-sm text-zinc-400">Recupera la visibilidad y estética de tus faros opacos.</p>
+        <!-- SECCIÓN ESTRELLA: EL ANTES Y DESPUÉS (FOTOS TAMAÑO COMPLETO) -->
+        <div class="mb-20">
+            <h3 class="text-2xl font-bold text-amber-500 mb-8 border-l-4 border-amber-500 pl-4">Nuestros Milagros (Antes
+                y Después)</h3>
+
+            <div class="flex flex-col gap-12">
+
+                <!-- Tarjeta Proyecto 2: Golpe Fuerte (1 vs 2) -->
+                <div
+                    class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group">
+                    <!-- Aquí está el truco: pasamos a 5 columnas en PC -->
+                    <div class="flex flex-col md:grid md:grid-cols-5">
+
+                        <!-- Mitad Antes (Se come 3 de las 5 columnas = 60% de ancho) -->
+                        <div
+                            class="md:col-span-3 relative bg-zinc-800 border-b md:border-b-0 md:border-r border-zinc-950 overflow-hidden">
+                            <div
+                                class="absolute top-4 left-4 bg-red-600/90 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                                ANTES</div>
+                            <img src="./img/roto1.jpg" alt="Golpe severo"
+                                class="w-full h-full object-cover hover:scale-105 transition duration-500 min-h-[300px]">
+                        </div>
+
+                        <!-- Mitad Después (Se come 2 de las 5 columnas = 40% de ancho) -->
+                        <div class="md:col-span-2 relative flex flex-col overflow-hidden bg-zinc-700">
+                            <div
+                                class="absolute top-4 right-4 bg-emerald-600/90 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                                DESPUÉS</div>
+                            <img src="./img/arreglado1front.jpg" alt="Arreglo frontal"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500">
+                            <img src="./img/arreglado1back.jpg" alt="Arreglo lateral"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500 border-t border-zinc-900">
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8">
+                        <h4 class="text-xl font-bold mb-2 text-white group-hover:text-amber-400 transition">Restauración
+                            frontal severa</h4>
+                        <p class="text-zinc-400 leading-relaxed">Reconstrucción de piezas estructurales, sustitución de
+                            paragolpes y encuadre perfecto.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Proyecto 1: Pintura Normal (2 vs 2) -->
+                <div
+                    class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group">
+                    <div class="flex flex-col md:grid md:grid-cols-2">
+
+                        <!-- Mitad Antes (2 Fotos con altura propia) -->
+                        <div
+                            class="relative flex flex-col overflow-hidden bg-zinc-800 border-b md:border-b-0 md:border-r border-zinc-950">
+                            <div
+                                class="absolute top-4 left-4 bg-red-600/90 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                                ANTES</div>
+                            <img src="./img/antes-pintura-1.jpg" alt="Estado previo 1"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500">
+                            <img src="./img/antes-pintura-2.jpg" alt="Estado previo 2"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500 border-t border-zinc-950">
+                        </div>
+
+                        <!-- Mitad Después (2 Fotos con altura propia) -->
+                        <div class="relative flex flex-col overflow-hidden bg-zinc-700">
+                            <div
+                                class="absolute top-4 right-4 bg-emerald-600/90 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                                DESPUÉS</div>
+                            <img src="./img/arreglado2.jpg" alt="Resultado 1"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500">
+                            <img src="./img/arreglado2-2.jpg" alt="Resultado 2"
+                                class="w-full h-64 md:h-[350px] object-cover hover:scale-105 transition duration-500 border-t border-zinc-900">
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8">
+                        <h4 class="text-xl font-bold mb-2 text-white group-hover:text-amber-400 transition">Restauración
+                            de pintura integral</h4>
+                        <p class="text-zinc-400 leading-relaxed">Tratamiento de arañazos múltiples e igualación de color
+                            en varias piezas de la carrocería.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <div class="text-center">
-            <button class="bg-amber-500 text-zinc-950 px-8 py-3 rounded-xl font-bold hover:bg-amber-400 transition">
-                Solicitar Presupuesto
+        <!-- Galería Tradicional -->
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-6">Instalaciones y Proceso</h3>
+            <p class="text-zinc-400 text-sm mb-8">Un vistazo a nuestras cabinas de pintura y zona de preparación.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div
+                    class="h-40 bg-zinc-900 rounded-xl border border-zinc-800 hover:border-amber-500 transition cursor-pointer flex items-center justify-center text-xs text-zinc-600">
+                    Foto Instalación 1</div>
+                <div
+                    class="h-40 bg-zinc-900 rounded-xl border border-zinc-800 hover:border-amber-500 transition cursor-pointer flex items-center justify-center text-xs text-zinc-600">
+                    Foto Instalación 2</div>
+                <div
+                    class="h-40 bg-zinc-900 rounded-xl border border-zinc-800 hover:border-amber-500 transition cursor-pointer flex items-center justify-center text-xs text-zinc-600">
+                    Trabajo en cabina</div>
+                <div
+                    class="h-40 bg-zinc-900 rounded-xl border border-zinc-800 hover:border-amber-500 transition cursor-pointer flex items-center justify-center text-xs text-zinc-600">
+                    Horno de secado</div>
+            </div>
+        </div>
+
+        <!-- Call to Action (Presupuesto) -->
+        <div
+            class="mt-20 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-10 text-center shadow-2xl">
+            <h3 class="text-2xl font-bold mb-4">¿Tu coche necesita un repaso?</h3>
+            <p class="text-zinc-400 mb-8 max-w-lg mx-auto">Pásate por el taller o envíanos unas fotos por WhatsApp y te
+                daremos una estimación sin ningún compromiso.</p>
+            <button
+                class="bg-amber-500 text-zinc-950 px-8 py-4 rounded-xl font-bold hover:bg-amber-400 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/20">
+                Pedir Presupuesto Gratuito
             </button>
         </div>
+
     </main>
+
+    <!-- Footer replicado para consistencia -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 pt-12 pb-6 mt-16">
+        <div class="max-w-5xl mx-auto px-6 text-center text-xs text-zinc-500">
+            <p>&copy; 2026 Picocars. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

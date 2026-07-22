@@ -3,61 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocasión - Picocars</title>
+    <title>Vehículos de Ocasión - Picocars</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen p-6">
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
 
-    <nav class="max-w-4xl mx-auto flex justify-between items-center border-b border-zinc-800 pb-4 mb-8">
-        <h1 class="text-xl font-bold text-blue-500">PICOCARS <span class="text-zinc-500 text-sm font-normal">| Ocasión</span></h1>
-        <a href="./index.html" class="text-sm text-zinc-400 hover:text-white">← Volver al inicio</a>
+    <!-- Navegación -->
+    <nav class="max-w-5xl mx-auto w-full flex justify-between items-center border-b border-zinc-800 py-6 px-6">
+        <h1 class="text-xl font-bold text-blue-500 tracking-wider">PICOCARS <span class="text-zinc-500 text-sm font-normal">| Ocasión</span></h1>
+        <a href="./index.html" class="text-sm font-semibold text-zinc-400 hover:text-white transition">← Volver al inicio</a>
     </nav>
 
-    <main class="max-w-4xl mx-auto">
-        <!-- Buscador -->
-        <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 flex gap-4 mb-8">
-            <input type="text" placeholder="Buscar marca o modelo..." class="bg-zinc-800 text-white px-4 py-2 rounded-lg w-full outline-none focus:ring-2 focus:ring-blue-500">
-            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition">Buscar</button>
+    <main class="flex-grow max-w-5xl mx-auto p-6 w-full mt-6">
+        
+        <!-- Cabecera del Catálogo -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Catálogo de Vehículos</h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Todos nuestros coches se entregan 100% revisados, con mantenimiento al día y 1 año de garantía premium.</p>
         </div>
 
-        <!-- Grid de Coches -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Grid del Catálogo de Coches -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             
-            <!-- Coche 1 (Conectado a la ficha) -->
-            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group flex flex-col">
-                <div class="h-48 bg-zinc-800 flex items-center justify-center text-zinc-500">
-                    [Foto del Audi A3]
+            <!-- Coche 1: Audi A3 -->
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group flex flex-col">
+                <div class="relative h-64 overflow-hidden bg-zinc-800">
+                    <!-- Aquí va tu primera foto -->
+                    <img src="./img/audia3.jpg" alt="Audi A3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">REVISADO</div>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold group-hover:text-blue-400 transition">Audi A3 S-Line</h3>
-                        <span class="text-lg font-bold text-blue-500">18.500 €</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Audi A3</h3>
+                        <span class="text-xl font-bold text-blue-500">18.500€</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mb-4 flex-grow">2019 • 120.000 km • Diésel • Manual</p>
-                    <!-- AQUÍ ESTÁ EL ENLACE ACTUALIZADO -->
-                    <a href="./detalleCoches.html" class="block text-center w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</a>
+                    <p class="text-zinc-400 text-sm mb-6">S-Line 2.0 TDI 150cv. Estado impecable, único propietario.</p>
+                    
+                    <!-- Especificaciones rápidas -->
+                    <div class="grid grid-cols-3 gap-2 mb-8 text-center text-xs text-zinc-300">
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">📅 2019</div>
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">🛣️ 85.000 km</div>
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">⛽ Diésel</div>
+                    </div>
+                    
+                    <!-- Botón hacia el detalle -->
+                    <a href="./detalleCoches.html" class="mt-auto bg-zinc-800 text-center py-4 rounded-xl font-bold tracking-wide hover:bg-blue-500 hover:text-zinc-950 transition w-full shadow-lg">
+                        Ver Detalles
+                    </a>
                 </div>
             </div>
 
-            <!-- Coche 2 (Conectado a la ficha) -->
-            <div class="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden hover:border-blue-500 transition group flex flex-col">
-                <div class="h-48 bg-zinc-800 flex items-center justify-center text-zinc-500">
-                    [Foto del VW Golf]
+            <!-- Coche 2: VW Golf GTI -->
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg shadow-black/50 group flex flex-col">
+                <div class="relative h-64 overflow-hidden bg-zinc-800">
+                    <!-- Aquí va tu segunda foto -->
+                    <img src="./img/volskgti2021.jpg" alt="Volkswagen Golf GTI 2021" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">RECIÉN LLEGADO</div>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold group-hover:text-blue-400 transition">Volkswagen Golf GTI</h3>
-                        <span class="text-lg font-bold text-blue-500">22.900 €</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">VW Golf GTI</h3>
+                        <span class="text-xl font-bold text-blue-500">32.900€</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mb-4 flex-grow">2021 • 65.000 km • Gasolina • Automático</p>
-                    <!-- AQUÍ ESTÁ EL ENLACE ACTUALIZADO -->
-                    <a href="./detalleCoches.html" class="block text-center w-full bg-zinc-800 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-700 transition">Ver detalles</a>
+                    <p class="text-zinc-400 text-sm mb-6">2.0 TSI 245cv DSG8. Full extras, techo panorámico, asientos backet.</p>
+                    
+                    <!-- Especificaciones rápidas -->
+                    <div class="grid grid-cols-3 gap-2 mb-8 text-center text-xs text-zinc-300">
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">📅 2021</div>
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">🛣️ 42.000 km</div>
+                        <div class="bg-zinc-950 py-2 rounded-lg border border-zinc-800">⛽ Gasolina</div>
+                    </div>
+                    
+                    <!-- Botón hacia el detalle -->
+                    <a href="./detalleCoches.html" class="mt-auto bg-zinc-800 text-center py-4 rounded-xl font-bold tracking-wide hover:bg-blue-500 hover:text-zinc-950 transition w-full shadow-lg">
+                        Ver Detalles
+                    </a>
                 </div>
             </div>
 
         </div>
     </main>
+
+    <!-- Pega aquí debajo el Footer gigante y realista que hicimos antes para el index.html -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 pt-12 pb-6">
+        <div class="max-w-5xl mx-auto px-6 text-center text-xs text-zinc-500">
+            <p>&copy; 2026 Picocars. Todos los derechos reservados. (Acuérdate de pegar el footer completo aquí)</p>
+        </div>
+    </footer>
+
 </body>
 </html>
